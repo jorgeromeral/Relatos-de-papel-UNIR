@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:books_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  application:
+      name: ms-books-catalogue
+
+# Usar variable de entorno para host/user/password de Elasticsearch
+
+  elasticsearch:
+    host: ${ELASTICSEARCH_HOST:universidad-search-9126956402.us-east-1.bonsaisearch.net}
+    credentials:
+      user: ${ELASTICSEARCH_USER:zgbcnizchn}
+      password: ${ELASTICSEARCH_PWD:bo8mb63t30}
+    logging:
+      level:
+        tracer: TRACE
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
