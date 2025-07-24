@@ -1,0 +1,132 @@
+[
+    {
+      "id": 1,
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "rating": 5,
+      "genre": "Realismo mágico",
+      "price": 19.99,
+      "description": "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.",
+      "cover_image": "/images/cien.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Don Quijote de la Mancha",
+      "author": "Miguel de Cervantes",
+      "rating": 4.5,
+      "genre": "Novela",
+      "price": 15.50,
+      "description": "La historia de un hidalgo que pierde la cordura y se convierte en un caballero andante, acompañado por su fiel escudero Sancho Panza.",
+      "cover_image": "/images/don.jpg"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "George Orwell",
+      "rating": 5,
+      "genre": "Distopía",
+      "price": 12.75,
+      "description": "Una novela distópica que presenta una sociedad totalitaria bajo la vigilancia constante del Gran Hermano.",
+      "cover_image": "/images/1984.jpg"
+    },
+    {
+      "id": 4,
+      "title": "El Principito",
+      "author": "Antoine de Saint-Exupéry",
+      "rating": 3.5,
+      "genre": "Fábula",
+      "price": 10.00,
+      "description": "Un cuento poético que narra la historia de un pequeño príncipe que viaja de planeta en planeta, aprendiendo sobre la vida y la naturaleza humana.",
+      "cover_image": "/images/principito.webp"
+    },
+    {
+      "id": 5,
+      "title": "Orgullo y prejuicio",
+      "author": "Jane Austen",
+      "rating": 4,
+      "genre": "Romance",
+      "price": 14.30,
+      "description": "Una novela que explora las complejidades del amor y las relaciones sociales en la Inglaterra del siglo XIX.",
+      "cover_image": "/images/orgullo.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "rating": 4.5,
+      "genre": "Drama",
+      "price": 13.45,
+      "description": "Una novela sobre la injusticia racial en el sur de Estados Unidos vista a través de los ojos de una niña.",
+      "cover_image": "/images/ruisenor.jpg"
+    },
+    {
+      "id": 7,
+      "title": "El gran Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "rating": 4.5,
+      "genre": "Tragedia",
+      "price": 11.99,
+      "description": "La historia de Jay Gatsby y su obsesión con la riqueza y el amor en la década de 1920.",
+      "cover_image": "/images/gatsby.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Crimen y castigo",
+      "author": "Fiódor Dostoyevski",
+      "rating": 5,
+      "genre": "Filosófica",
+      "price": 16.20,
+      "description": "Una novela que explora los dilemas morales y psicológicos de un joven estudiante que comete un asesinato.",
+      "cover_image": "/images/crimen.jpeg"
+    },
+    {
+      "id": 9,
+      "title": "La Odisea",
+      "author": "Homero",
+      "rating": 3,
+      "genre": "Épica",
+      "price": 18.50,
+      "description": "El poema épico que narra las aventuras de Odiseo en su regreso a casa después de la guerra de Troya.",
+      "cover_image": "/images/odisea.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Ulises",
+      "author": "James Joyce",
+      "rating": 4.5,
+      "genre": "Modernista",
+      "price": 20.75,
+      "description": "Una novela que sigue las vidas de varios personajes en Dublín durante un solo día.",
+      "cover_image": "/images/ulises.jpg"
+    },
+    {
+      "id": 11,
+      "title": "La metamorfosis",
+      "author": "Franz Kafka",
+      "rating": 4.5,
+      "genre": "Existencialismo",
+      "price": 9.99,
+      "description": "La historia de Gregor Samsa, un hombre que se despierta transformado en un insecto gigante.",
+      "cover_image": "/images/metamorfosis.jpg"
+    },
+    {
+      "id": 12,
+      "title": "El nombre de la rosa",
+      "author": "Umberto Eco",
+      "rating": 4.5,
+      "genre": "Misterio",
+      "price": 17.60,
+      "description": "Una novela de misterio ambientada en una abadía benedictina en el siglo XIV.",
+      "cover_image": "/images/rosa.jpg"
+    },
+    {
+      "id": 13,
+      "title": "El señor de los anillos",
+      "author": "J.R.R. Tolkien",
+      "rating": 5,
+      "genre": "Fantasía",
+      "price": 25.00,
+      "description": "Una épica trilogía de fantasía que sigue la lucha entre el bien y el mal en la Tierra Media.",
+      "cover_image": "/images/anillos.jpg"
+    }
+]
