@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>ms-books-catalogue</module>
-        <module>ms-books-payments</module>
+        <module>ms_books_catalogue</module>
+        <module>ms_books_payments</module>
         <module>gatewayACL</module>
         <module>eureka</module>
     </modules>
