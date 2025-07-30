@@ -9,6 +9,7 @@ import com.unir.ms_books_catalogue.models.Book;
 import com.unir.ms_books_catalogue.models.BooksQueryResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.ParsedLongTerms;
@@ -34,6 +35,8 @@ public class DataAccessRepository {
     private final BookRepository bookRepository;
     private final ElasticsearchOperations elasticClient; // This comes from ElasticSearch configuration (config)
 
+    private final String[] titleSearchFields = {"title", "title._2gram", "title._3gram"};
+
     public Book save(Book book) { return bookRepository.save(book); }
 
     public Boolean delete(Book book) {
@@ -50,8 +53,9 @@ public class DataAccessRepository {
 
         BoolQueryBuilder querySpec = QueryBuilders.boolQuery();
 
+        // Multimatch as I put it as search as you type
         if (!StringUtils.isEmpty(title)) {
-            querySpec.must(QueryBuilders.matchQuery("title", title));
+            querySpec.must(QueryBuilders.multiMatchQuery(title, titleSearchFields).type(MultiMatchQueryBuilder.Type.BOOL_PREFIX));
         }
 
         if (!StringUtils.isEmpty(author)) {

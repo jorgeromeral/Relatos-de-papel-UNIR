@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface BookRepository extends ElasticsearchRepository<Book, String> {
 
-    List<Book> findByName(String name);
+    List<Book> findByTitle(String title);
 
     Optional<Book> findById(String id);
 

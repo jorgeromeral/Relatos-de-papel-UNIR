@@ -26,13 +26,13 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: ms-books-catalogue
+        - id: ms_books_catalogue
           uri: lb://ms-books-catalogue
           predicates:
             - Path=/ms-books-catalogue/**
           filters:
             - StripPrefix=1
-        - id: ms-books-payments
+        - id: ms_books_payments
           uri: lb://ms-books-payments
           predicates:
             - Path=/ms-books-payments/**
@@ -41,7 +41,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins: "http://localhost"
+            allowed-origins: "http://localhost" ## Frontend URL
             allowed-methods: "POST"
             allowed-headers: "*"
             allow-credentials: true

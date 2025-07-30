@@ -1,0 +1,49 @@
+
+version: "3.8"
+
+services:
+  #frontend:
+  #  build: ./front-end
+  #  container_name: frontend
+  #  ports:
+  #    - "80:80"
+  #  networks:
+  #    - app-network
+
+  eureka:
+    build: ./eureka
+    container_name: eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - app-network
+
+  gateway:
+    build: ./gatewayACL
+    container_name: gatewayACL
+    ports:
+      - "8762:8762"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+    networks:
+      - app-network
+
+  ms_books_catalogue:
+    build: ./ms_books_catalogue
+    container_name: ms_books_catalogue
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
+      - ELASTICSEARCH_USER=${ELASTICSEARCH_USER}
+      - ELASTICSEARCH_PWD=${ELASTICSEARCH_PWD}
+      - EUREKA_URL=${EUREKA_URL}
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
