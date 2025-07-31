@@ -48,6 +48,8 @@ public class DataAccessRepository {
         return bookRepository.findById(id);
     }
 
+    public List<Book> findAll() { return bookRepository.findAll(); }
+
     @SneakyThrows
     public BooksQueryResponse findBooks(String title, String author, List<String> categoryValues, String isbn, List<String> ratingValues, boolean visibility, String page) {
 

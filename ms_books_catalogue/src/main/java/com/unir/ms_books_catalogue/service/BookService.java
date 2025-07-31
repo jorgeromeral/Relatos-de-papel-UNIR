@@ -34,6 +34,9 @@ public class BookService {
         return dataAccessRepository.findById(bookId).orElse(null);
     }
 
+    // Find all books
+    public List<Book> getAllBooks() { return dataAccessRepository.findAll(); }
+
     // Remove book by id
     public Boolean removeBook(String bookId) {
 

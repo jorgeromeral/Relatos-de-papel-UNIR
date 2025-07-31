@@ -49,6 +49,13 @@ public class BookController {
         return book != null ? ResponseEntity.ok(book) : ResponseEntity.notFound().build();
     }
 
+    // Get all books
+    @GetMapping
+    public ResponseEntity<List<Book>> getAllBooks() {
+        List<Book> books = bookService.getAllBooks();
+        return books != null ? ResponseEntity.ok(books) : ResponseEntity.notFound().build();
+    }
+
     // Create a new book
     @PostMapping
     public ResponseEntity<Book> createBook(@RequestBody CreateBookRequest bookRequest) {
