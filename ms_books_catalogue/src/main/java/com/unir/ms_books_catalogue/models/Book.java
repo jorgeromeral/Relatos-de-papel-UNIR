@@ -37,6 +37,9 @@ public class Book {
     @Field(type = FieldType.Integer)
     private int rating;
 
+    @Field(type = FieldType.Double)
+    private double price;
+
     @Field(type = FieldType.Boolean)
     private boolean visibility;
 

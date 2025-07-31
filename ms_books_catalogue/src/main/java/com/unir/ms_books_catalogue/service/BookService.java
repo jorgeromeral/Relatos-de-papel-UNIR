@@ -59,6 +59,7 @@ public class BookService {
             if(newBook.getCategory() != null) book.setCategory(newBook.getCategory());
             if(newBook.getIsbn() != null) book.setIsbn(newBook.getIsbn());
             if(newBook.getRating() >= 0 && newBook.getRating() <= 5) book.setRating(newBook.getRating());
+            if(newBook.getPrice() > 0) book.setPrice(newBook.getPrice());
             if(newBook.getStock() > 0) book.setStock(newBook.getStock());
             if(newBook.isVisibility()) book.setVisibility(true);
             if(!newBook.isVisibility()) book.setVisibility(false);
@@ -78,6 +79,7 @@ public class BookService {
                 && StringUtils.hasText(request.getCategory())
                 && StringUtils.hasText(request.getIsbn())
                 && request.getRating() >= 0 && request.getRating() <= 5
+                && request.getPrice() > 0
                 && request.getStock() > 0) {
 
             // Create a new book instance using the builder pattern and trim the fields

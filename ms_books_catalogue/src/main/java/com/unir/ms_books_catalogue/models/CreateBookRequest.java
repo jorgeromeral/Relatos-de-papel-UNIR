@@ -16,6 +16,7 @@ public class CreateBookRequest {
     private String category;
     private String isbn;
     private int rating;
+    private double price;
     private boolean visibility;
     private int stock;
 }
