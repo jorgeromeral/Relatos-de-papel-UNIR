@@ -3,17 +3,17 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 
-export const Book = ({ id, title, author, rating, price, cover_image }) => {
+export const Book = ({ id, title, author, rating, price, cover }) => {
 
   const { addToCart } = useContext(CartContext);
-  const book = { id, title, author, rating, price, cover_image };
+  const book = { id, title, author, rating, price, cover };
 
   return (
     <div className="col">
       <div id='book_card' className="card mb-3">
         <div className="row g-0">
           <Link className="text-decoration-none col-md-4" to={`/books/${id}` }>
-            <img src={cover_image} className="img-fluid rounded-start" alt={title} />
+            <img src={cover} className="img-fluid rounded-start" alt={title} />
           </Link>
           <div className="col-md-8">
             <div className="card-body">

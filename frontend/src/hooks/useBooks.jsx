@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
-import booksData from "../../public/booksData.json";
+//import { useEffect, useState } from "react";
+import { useFetch } from "./useFetch";
 
 export const useBooks = () => {
     
-    const [books, setBooks] = useState([]);
-    
-    useEffect(() => {
-        setBooks(booksData);
-    }, []);
+    const apiURL = import.meta.env.VITE_API_URL;
+
+    const books = useFetch(`${apiURL}/ms-books-catalogue/api/books`);
     
     return books;
     }

@@ -21,7 +21,7 @@ export const Home = () => {
                             author={book.author}
                             rating={book.rating}
                             price={book.price}
-                            cover_image={book.cover_image}
+                            cover={book.cover}
                         />
                     ))
                 ) : (
