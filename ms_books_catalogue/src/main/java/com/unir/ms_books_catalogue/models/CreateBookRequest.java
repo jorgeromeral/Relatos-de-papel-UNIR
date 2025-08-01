@@ -19,4 +19,6 @@ public class CreateBookRequest {
     private double price;
     private boolean visibility;
     private int stock;
+    // Not added yet due to it is not available to change cover image
+    // private String cover;
 }

@@ -45,4 +45,8 @@ public class Book {
 
     @Field(type = FieldType.Integer)
     private int stock;
+
+    // Static field for now (just image path)
+    @Field(type = FieldType.Keyword, index = false)
+    private String cover;
 }
